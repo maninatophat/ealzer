@@ -38,16 +38,12 @@
 
   gtag('config', 'G-CEHP68KR81');
 </script>
-	  <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup Example</title>
     <style>
-        /* Popup container */
         #popup {
-            display: none; /* Initially hidden */
+            display: none;
             position: fixed;
             top: 10px;
             left: 10px;
@@ -56,10 +52,9 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* Ensure it appears on top */
+            z-index: 1000;
         }
         
-        /* Popup button */
         #popup a {
             text-decoration: none;
             color: #007bff;
@@ -72,7 +67,6 @@
 </head>
 <body>
 
-    <!-- Popup structure -->
     <div id="popup">
         <p>Hey, you are on a ComfyLoader site. <a href="https://sites.google.com/view/comfyloader" target="_blank">Click here to view ComfyLoader</a></p>
     </div>
@@ -87,14 +81,12 @@
             var popup = document.getElementById('popup');
             popup.style.display = 'none';
         }
+	    
+        setInterval(showPopup, 300000);
 
-        // Show popup every 5 minutes
-        setInterval(showPopup, 3); // 300000 milliseconds = 5 minutes
-
-        // Hide popup after 10 seconds
         setInterval(function() {
             hidePopup();
-        }, 10000); // 10000 milliseconds = 10 seconds
+        }, 10000);
     </script>
 
 </body>
