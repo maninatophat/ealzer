@@ -38,6 +38,68 @@
 
   gtag('config', 'G-CEHP68KR81');
 </script>
+	  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <style>
+        /* Popup container */
+        #popup {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure it appears on top */
+        }
+        
+        /* Popup button */
+        #popup a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        #popup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Popup structure -->
+    <div id="popup">
+        <p>Hey, you are on a ComfyLoader site. <a href="https://sites.google.com/view/comfyloader" target="_blank">Click here to view ComfyLoader</a></p>
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        }
+
+        function hidePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        // Show popup every 5 minutes
+        setInterval(showPopup, 300000); // 300000 milliseconds = 5 minutes
+
+        // Hide popup after 10 seconds
+        setInterval(function() {
+            hidePopup();
+        }, 10000); // 10000 milliseconds = 10 seconds
+    </script>
+
+</body>
+</html>
+
     
     <script type="text/javascript">
       if (document.location.href.startsWith("file:")) {
