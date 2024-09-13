@@ -55,3 +55,30 @@
   </head>
   <body style="margin: 0px; width: 100vw; height: 100vh; overflow: hidden;" id="game_frame"></body>
 </html>
+</head>
+<body>
+
+    <div id="popup">
+        <p>Hey, you are on a ComfyLoader site. <a href="https://sites.google.com/view/comfyloader" target="_blank">Click here to view ComfyLoader</a></p>
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        }
+
+        function hidePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+	    
+        setInterval(showPopup, 200000);
+
+        setInterval(function() {
+            hidePopup();
+        }, 10000);
+    </script>
+
+</body>
+</html>
